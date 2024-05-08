@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aubrey Drake Graham</title>
+    <!-- Include jQuery for fade effects -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Import the custom font */
+        @font-face {
+    src: url(tradegothic.ttf);
+    font-family: tgc;
+}
+
+	@font-face {
+    src: url(timesregular.ttf);
+    font-family: tir;
+}
+
+        html, body {
+            height: 100%;
+            overflow: hidden; /* Prevents overall body scrolling */
+        }
+
+        /* Container to hold both sides with equal width */
+        .container {
+            display: flex; /* Use flexbox for equal-width sides */
+            height: 100%; /* Ensure full height for the content area */
+        }
+
+        /* Left content for fading images with dark overlay */
+        .left-content {
+            width: 50%; /* Equal width for both sides */
+            position: relative; /* Allows for absolute positioning */
+            overflow: hidden; /* Ensures images do not overflow the container */
+        }
+
+        /* Scrollable right side */
+.right-content {
+    width: 50%; /* Equal width for both sides */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Optional padding */
+	
+	
+}
+
+
+        /* CSS for fading images with dark overlay */
+        .images {
+            position: relative; /* Allows absolute positioning of text */
+            height: 100%; /* Occupy full height */
+        }
+
+        .images img {
+            display: none; /* Initially hide all images */
+            position: absolute; /* Allows images to overlap for fade effect */
+            top: 0;
+            left: 0;
+            width: 100%; /* Ensure the images cover the entire container */
+            height: 100%; /* Ensures the images cover the entire container */
+            object-fit: cover; /* Ensures images scale properly without distortion */
+        }
+
+        /* Dark overlay to darken the images without affecting the text */
+        .dark-overlay {
+            position: absolute; /* Allows for full overlay */
+            top: 0;
+            left: 0;
+            width: 100%; /* Full width of the container */
+            height: 100%; /* Full height of the container */
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black, adjust opacity as needed */
+            z-index: 1; /* Lower z-index to ensure it stays behind the text */
+        }
+
+.text-overlay {
+    position: absolute; /* Ensures consistent positioning relative to the parent */
+    top: 20%; /* Adjusts vertical position of the entire text container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Centers horizontally */
+    z-index: 2; /* Ensures it stays above other elements */
+    width: 90%; /* Widen the space for the description */
+    text-align: center; /* Centers text alignment */
+}
+
+.artist-name {
+    font-family: tgc; /* Custom font */
+    font-size: 120px; /* Large font for the artist's name */
+    color: #FFFFFF; /* White text */
+    position: absolute; /* Absolute positioning to keep it fixed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Centers horizontally */
+}
+
+.description {
+    font-family: tir; /* Custom font */
+    font-size: 24px; /* Description font size */
+    color: #FFFFFF; /* White text */
+    position: absolute; /* Absolute positioning to ensure consistency */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, 200px); /* Move 50px down */
+    width: 90%; /* Allow a wider space for the description */
+    text-align: center; /* Centers the text alignment */
+}
+
+.image {
+    width: 200px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the entire area without distortion */
+    display: block; /* Ensure it's displayed as a block-level element */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-content">
+            <div class="images">
+                <img src="drake1.jpg" alt="Aubrey Drake Graham" />
+                <img src="drake2.png" alt="Aubrey Drake Graham" />
+                <img src="drake3.jpg" alt="Aubrey Drake Graham" />
+                <!-- Add more images as needed -->
+            </div>
+            <div class="dark-overlay"></div> <!-- The dark overlay to darken the background -->
+            <div class="text-overlay">
+                <div class="artist-name">DRAKE</div>
+                <div class="description">Aubrey Drake Graham (born October 24, 1986), professionally known by his middle name Drake, is a Canadian rapper, singer, songwriter, record producer, actor, and entrepreneur.</div>
+            </div>
+        </div>
+<div class="right-content">
+    <!-- Centered introduction paragraph with added spacing -->
+	<div style="text-align: center;"> <!-- Center the image -->
+        <img src="ovo-logo.png" alt="J. Cole Album"> <!-- Adjust width as needed -->
+    </div>
+	
+    <p style="font-family: 'mont'; font-size: 20px; color: #000000; text-align: center; margin-top: 20px; margin-bottom: 40px;">
+Drake has produced a remarkable catalog of albums, earning him a reputation as one of the most successful and influential artists in contemporary music. His distinctive style blends hip-hop, R&B, and pop, creating a sound that resonates with a broad audience. Throughout his career, Drake has consistently pushed the boundaries of music, exploring themes of love, fame, success, and personal growth.
+    </p>
+
+    <!-- Image of Cole's album with added spacing -->
+    <div style="text-align: center; margin-bottom: 20px;"> <!-- Add margin below the image -->
+<img class="image" src="album1.jpg" alt="J. Cole Album 1">
+    </div>
+    
+    <!-- Description of the album with added spacing -->
+    <p style="font-family: 'tgc'; font-size: 20px; color: #000000; text-align: center; margin-top: 20px;">
+        SO FAR GONE
+    </p>
+	   
+	   <p style="font-family: 'tir'; font-size: 16px; color: #888888; text-align: center; margin-top: 20px;">
+        
+
+"So Far Gone" is a seminal mixtape by Drake, released in 2009, that marked a major turning point in his career. The project, a blend of hip-hop and R&B, features a mix of introspective tracks and radio-friendly hits, establishing Drake as a rising star in the music industry. It received critical acclaim for its innovative sound and introspective lyricism, leading to widespread recognition and commercial success.
+    </p>
+
+
+  <div style="text-align: center; margin-top: 40px;"> <!-- Add margin below the image -->
+ <img class="image" src="album2.jpg" alt="J. Cole Album 1">
+    </div>
+    
+    <!-- Description of the album with added spacing -->
+    <p style="font-family: 'tgc'; font-size: 20px; color: #000000; text-align: center; margin-top: 20px;">
+        THANK ME LATER
+    </p>
+	   
+
+	   <p style="font-family: 'tir'; font-size: 16px; color: #888888; text-align: center; margin-top: 20px;">
+        
+
+"Thank Me Later" is Drake's debut studio album, released in 2010, following the success of his mixtape "So Far Gone." The album solidified Drake's transition from a promising new artist to a leading figure in the hip-hop world. It features a mix of introspective lyrics, infectious hooks, and a polished production style that captures the essence of Drake's musical identity.
+    </p>
+	
+	  <div style="text-align: center; margin-top: 40px;"> <!-- Add margin below the image -->
+ <img class="image" src="album3.jpg" alt="J. Cole Album 1">
+    </div>
+    
+    <!-- Description of the album with added spacing -->
+    <p style="font-family: 'tgc'; font-size: 20px; color: #000000; text-align: center; margin-top: 20px;">
+	NOTHING WAS THE SAME
+    </p>
+	   
+
+	   <p style="font-family: 'tir'; font-size: 16px; color: #888888; text-align: center; margin-top: 20px;">
+        
+"Nothing Was the Same" is Drake's third studio album, released in 2013, and is widely regarded as a turning point in his career. The album reflects a more mature and introspective approach, with Drake exploring themes of success, relationships, and personal growth against a backdrop of sleek production and catchy melodies.
+    </p>
+	
+		  <div style="text-align: center; margin-top: 40px;"> <!-- Add margin below the image -->
+ <img class="image" src="album4.jpg" alt="J. Cole Album 1">
+    </div>
+    
+    <!-- Description of the album with added spacing -->
+    <p style="font-family: 'tgc'; font-size: 20px; color: #000000; text-align: center; margin-top: 20px;">
+VIEWS 
+    </p>
+	   
+
+	   <p style="font-family: 'tir'; font-size: 16px; color: #888888; text-align: center; margin-top: 20px;">
+"Views," released in 2016, is Drake's fourth studio album, and it marked a significant commercial success, becoming one of his most iconic projects. The album explores a wide range of themes, from the cold landscapes of Toronto to the warm vibes of Caribbean-inspired music, reflecting the diversity of Drake's influences.
+    </p>
+	
+			  <div style="text-align: center; margin-top: 40px;"> <!-- Add margin below the image -->
+ <img class="image" src="album5.jpg" alt="J. Cole Album 1">
+    </div>
+    
+    <!-- Description of the album with added spacing -->
+    <p style="font-family: 'tgc'; font-size: 20px; color: #000000; text-align: center; margin-top: 20px;">
+SCORPION
+    </p>
+	   
+
+	   <p style="font-family: 'tir'; font-size: 16px; color: #888888; text-align: center; margin-top: 20px;">
+	   
+"Scorpion" is Drake's fifth studio album, released in 2018. This double album features a diverse mix of hip-hop and R&B, demonstrating Drake's versatility and addressing a wide range of themes, from introspective reflections to radio-friendly hits.
+    </p>
+	
+	<div style="text-align: center; margin-top: 40px;"> <!-- Add margin below the image -->
+ <img class="image" src="album6.jpg" alt="J. Cole Album 1">
+    </div>
+    
+    <!-- Description of the album with added spacing -->
+    <p style="font-family: 'tgc'; font-size: 20px; color: #000000; text-align: center; margin-top: 20px;">
+        CERTIFIED LOVER BOY
+    </p>
+	   
+
+	   <p style="font-family: 'tir'; font-size: 16px; color: #888888; text-align: center; margin-top: 20px;">
+	   
+
+
+"Certified Lover Boy" is Drake's sixth studio album, released in 2021. The album combines elements of hip-hop and R&B, with a focus on themes of love, relationships, and personal introspection. Known for its blend of melodic beats and reflective lyrics, "Certified Lover Boy" explores the complexities of modern relationships while delivering catchy hooks and chart-topping singles.
+
+    </p>
+	
+	    </p>
+	
+	<div style="text-align: center; margin-top: 40px;"> <!-- Add margin below the image -->
+ <img class="image" src="album7.jpg" alt="J. Cole Album 1">
+    </div>
+    
+    <!-- Description of the album with added spacing -->
+    <p style="font-family: 'tgc'; font-size: 20px; color: #000000; text-align: center; margin-top: 20px;">
+	HER LOSS
+    </p>
+	   
+
+	   <p style="font-family: 'tir'; font-size: 16px; color: #888888; text-align: center; margin-top: 20px;">
+	   
+
+
+"Her Loss" is a collaborative studio album by Drake and 21 Savage, released in November 2022. The album is a fusion of Drake's melodic and introspective style with 21 Savage's gritty and straightforward approach, creating a captivating mix of hip-hop and rap. It features high-energy tracks, hard-hitting beats, and a confident attitude throughout.
+
+    </p>
+	
+		<div style="text-align: center; margin-top: 40px;"> <!-- Add margin below the image -->
+ <img class="image" src="album8.png" alt="J. Cole Album 1">
+    </div>
+    
+    <!-- Description of the album with added spacing -->
+    <p style="font-family: 'tgc'; font-size: 20px; color: #000000; text-align: center; margin-top: 20px;">
+FOR ALL THE DOGS
+    </p>
+	   
+
+	   <p style="font-family: 'tir'; font-size: 16px; color: #888888; text-align: center; margin-top: 20px;">
+	   
+
+
+"For All the Dogs" is a studio album by Drake, released in 2023. The album showcases Drake's signature blend of hip-hop and R&B, with introspective themes and catchy melodies that have become his trademark. It explores a range of emotions and experiences, from romantic relationships to personal growth and the complexities of fame.    </p>
+	
+	    </p>
+	
+</div>
+
+
+    <!-- JavaScript to handle the fade-in/fade-out effect and text change -->
+    <script>
+        $(function() {
+            var images = $(".images img").hide(); /* Initially hide all images */
+            var descriptions = [
+                "Aubrey Drake Graham (born October 24, 1986), professionally known by his middle name Drake, is a Canadian rapper, singer, songwriter, record producer, actor, and entrepreneur.",
+                "In 2001, Drake rose to fame playing the role of Jimmy Brooks, a character on Degrassi: The Next Generation (2001), a basketball star who is confined to a wheelchair after being shot by a classmate.",
+                "Drake is part of a generation of rappers, along with Wiz Khalifa, Kid Cudi, and others, who came up through internet mixtapes. Drizzy put out three mixtapes from 2006 to 2009: Room for Improvement, Comeback Season, and So Far Gone.",
+                // Add more descriptions matching the order of images
+            ];
+            var current = 0;
+            images.eq(current).fadeIn(); /* Show the first image */
+            setInterval(function() {
+                var next = (current + 1) % images.length;
+                images.eq(current). fadeOut(); /* Fade out the current image */
+                images.eq(next).fadeIn(); /* Fade in the next image */
+                $(".text-overlay .description").text(descriptions[next]); /* Update description text */
+                current = next; /* Update the current index */
+            }, 5000); /* Change the image every 3 seconds, adjust as needed */
+        });
+    </script>
+</body>
+</html>
+
+
+
